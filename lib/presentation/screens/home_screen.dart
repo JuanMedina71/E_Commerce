@@ -11,7 +11,18 @@ class HomeScreen extends StatelessWidget {
       appBar: const CustomAppBar(),
       body: Column(
         children: [
-          UserCard(user: User.users[0]),
+          Draggable(
+            child: UserCard(user: User.users[0]),
+            feedback: UserCard(user: User.users[0]),
+            childWhenDragging: UserCard(user: User.users[1]),
+            onDragEnd: (drag) {
+              if(drag.velocity.pixelsPerSecond.dx < 0) {
+                print('Swiped Left');
+              } else {
+                print('Swiped Right');
+              }
+            },
+            ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 60),
             child: Row(
