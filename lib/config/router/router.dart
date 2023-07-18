@@ -1,4 +1,4 @@
-import 'package:e_commerce/presentation/screens/homeScreen.dart';
+import 'package:e_commerce/presentation/screens/home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
