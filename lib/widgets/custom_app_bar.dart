@@ -36,7 +36,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: (){
                 //TODO:  Implementar acciones con Bloc
                 },
-              icon: Icon(Icons.account_circle_outlined, color: Theme.of(context).primaryColor)
+             icon: Icon(Icons.account_circle_outlined, color: Theme.of(context).primaryColor)
             ),
 
             
