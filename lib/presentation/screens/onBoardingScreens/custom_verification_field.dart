@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomVerificationField extends StatelessWidget {
   final TabController tabController;
   final String text;
 
-  const CustomTextField ({
+  const CustomVerificationField ({
     super.key,
     required this.tabController,
     required this.text
@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
         hintText: text,
         enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20)).copyWith(borderSide: BorderSide(color: Colors.deepPurple)),
         focusedBorder:  OutlineInputBorder(borderRadius: BorderRadius.circular(20)).copyWith(borderSide: BorderSide(color: Colors.deepPurpleAccent)),
-        suffixIcon: Icon(Icons.email_rounded, color: Colors.deepPurple,),
+        suffixIcon: Icon(Icons.lock_outline_rounded, color: Colors.deepPurple,),
         contentPadding: const EdgeInsets.only(bottom: 5.0, top: 12.5, left: 10),
         
       ),

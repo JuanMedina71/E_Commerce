@@ -2,10 +2,10 @@ import 'package:e_commerce/presentation/screens/onBoardingScreens/on_boarding_sc
 import 'package:e_commerce/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
-class Email extends StatelessWidget {
-    final TabController tabController;
-  
-  const Email({
+class Biography extends StatelessWidget {
+  final TabController tabController;
+
+  const Biography ({
     super.key,
     required this.tabController
     });
@@ -20,10 +20,13 @@ class Email extends StatelessWidget {
            Column(
             children: [
                 const SizedBox(height: 25),
-                CustomTextHeader(tabController: tabController, text: 'Ingresa tu correo electronico',),
+                CustomTextHeader(tabController: tabController, text: 'Describete a ti mismo',),
                 const SizedBox(height: 30),
-                CustomTextField(tabController: tabController, text: 'INGRESA TU CORREO',),  
+                CustomDescriptionField(tabController: tabController, text: 'DESCRIPCIÓN BREVE',),  
                 const SizedBox(height: 30),
+                CustomTextHeader(tabController: tabController, text: '¿Cuales son tus gustos?',),
+                const SizedBox(height: 30),
+
 
             ],
           ),

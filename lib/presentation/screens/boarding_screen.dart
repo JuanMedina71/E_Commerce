@@ -1,3 +1,6 @@
+import 'package:e_commerce/presentation/screens/onBoardingScreens/bio_screen.dart';
+import 'package:e_commerce/presentation/screens/onBoardingScreens/picture_screen.dart';
+import 'package:e_commerce/presentation/screens/onBoardingScreens/verification_screen.dart';
 import 'package:e_commerce/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce/presentation/screens/onBoardingScreens/on_boarding_screens.dart';
@@ -9,6 +12,10 @@ class BoardingScreen extends StatelessWidget {
   static const List<Tab> tabs = <Tab> [
     Tab(text: 'Start'),
     Tab(text: 'Email'),
+    Tab(text: 'Verification'),
+    Tab(text: 'Demo'),
+    Tab(text: 'Pictures'),
+    Tab(text: 'Biography'),
 
 
   ];
@@ -32,6 +39,10 @@ class BoardingScreen extends StatelessWidget {
       body: TabBarView(children: [
         Start(tabController: tabController),
         Email(tabController: tabController),
+        Verification(tabController: tabController),
+        Demo(tabController: tabController),
+        Picture(tabController: tabController),
+        Biography(tabController: tabController),
 
       ]),
     );

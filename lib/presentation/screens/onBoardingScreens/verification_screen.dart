@@ -2,17 +2,19 @@ import 'package:e_commerce/presentation/screens/onBoardingScreens/on_boarding_sc
 import 'package:e_commerce/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
-class Email extends StatelessWidget {
-    final TabController tabController;
+class Verification extends StatelessWidget {
+  final TabController tabController;
+
   
-  const Email({
+  const Verification({
     super.key,
-    required this.tabController
+    required this.tabController    
     });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
+      
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -20,9 +22,9 @@ class Email extends StatelessWidget {
            Column(
             children: [
                 const SizedBox(height: 25),
-                CustomTextHeader(tabController: tabController, text: 'Ingresa tu correo electronico',),
+                CustomTextHeader(tabController: tabController, text: 'Ingresa tu código de verificación',),
                 const SizedBox(height: 30),
-                CustomTextField(tabController: tabController, text: 'INGRESA TU CORREO',),  
+                CustomVerificationField(tabController: tabController, text: 'CÓDIGO DE VERIFICACIÓN',),  
                 const SizedBox(height: 30),
 
             ],
@@ -32,6 +34,7 @@ class Email extends StatelessWidget {
             
         ],
       ), 
+      
       );
   }
 }
