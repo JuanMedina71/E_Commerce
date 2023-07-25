@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+  final String title;
+  final bool hasActions;
+
+  const CustomAppBar({super.key, required this.title, this.hasActions = true});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             Expanded(
               flex: 2,
               child: Text(
-                'DISCOVER',
+                title,
                 style: Theme.of(context).textTheme.displaySmall,
                 ),
             )
@@ -25,7 +29,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           
           ],
           ),
-          actions: [
+          actions: 
+            hasActions ? 
+          [
             IconButton(
               onPressed: (){
                 //TODO: Implementar accion con bloc
@@ -39,8 +45,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
              icon: Icon(Icons.account_circle_outlined, color: Theme.of(context).primaryColor)
             ),
 
-            
-          ],
+  
+          ] : null,
    ));
   }
   
