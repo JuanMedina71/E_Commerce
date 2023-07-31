@@ -18,9 +18,9 @@ class CustomDescriptionField extends StatelessWidget {
         filled: true,
         fillColor: Colors.white,
         hintText: text,
-        enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20)).copyWith(borderSide: BorderSide(color: Colors.deepPurple)),
-        focusedBorder:  OutlineInputBorder(borderRadius: BorderRadius.circular(20)).copyWith(borderSide: BorderSide(color: Colors.deepPurpleAccent)),
-        suffixIcon: Icon(Icons.description_outlined, color: Colors.deepPurple,),
+        enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20)).copyWith(borderSide: const BorderSide(color: Colors.deepPurple)),
+        focusedBorder:  OutlineInputBorder(borderRadius: BorderRadius.circular(20)).copyWith(borderSide: const BorderSide(color: Colors.deepPurpleAccent)),
+        suffixIcon: const Icon(Icons.description_outlined, color: Colors.deepPurple,),
         contentPadding: const EdgeInsets.only(bottom: 10.0, top: 12.5, left: 10),
         
       ),

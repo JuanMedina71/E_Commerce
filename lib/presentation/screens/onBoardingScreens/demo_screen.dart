@@ -1,7 +1,7 @@
 import 'package:e_commerce/presentation/screens/onBoardingScreens/on_boarding_screens.dart';
-import 'package:e_commerce/widgets/custom_button.dart';
 import 'package:e_commerce/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class Demo extends StatelessWidget {
   final TabController tabController;
@@ -33,8 +33,15 @@ class Demo extends StatelessWidget {
 
             ],
           ),
+Column(
+               children: [
+                 const StepProgressIndicator(totalSteps: 5, currentStep: 3, selectedColor: Colors.deepPurple, unselectedColor: Colors.black26,),
+             const SizedBox(height: 15,),
              CustomButton(tabController: tabController, text: 'NEXT STEP'),
-            
+
+               ],
+
+             ),            
             
         ],
       ), 

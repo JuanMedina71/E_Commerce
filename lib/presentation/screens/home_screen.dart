@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  CustomAppBar(
+      appBar:  const CustomAppBar(
         title: 'DISCOVER',
       ),
       body: BlocBuilder<SwipeBloc, SwipeState>(
@@ -33,13 +33,11 @@ class HomeScreen extends StatelessWidget {
                         context
                             .read<SwipeBloc>()
                             .add(SwipeLeft(user: state.users[0]));
-                        print('Se esta moviendo a la izquierda');
                       } else {
                         // Desliza a la derecha
                         context
                             .read<SwipeBloc>()
                             .add(SwipeRight(user: state.users[0]));
-                        print('Se esta moviendo a la derecha');
                       }
                     },
                   ),

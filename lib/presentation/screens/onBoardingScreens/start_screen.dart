@@ -19,7 +19,7 @@ class Start extends StatelessWidget {
           Column(
             children: [
               const SizedBox(height: 50),
-              Container(
+              SizedBox(
                 height: 300,
                 width: 300,
                 child: Image.asset('assets/start.png'),
@@ -27,7 +27,7 @@ class Start extends StatelessWidget {
              const SizedBox(height: 20),
              Text('Welcome to Arrow', style: Theme.of(context).textTheme.displaySmall),
              const SizedBox(height: 20),
-             Text('Nisi magna laboris irure culpa velit aliquip veniam ad pariatur laboris laborum excepteur dolor. Dolor sint tempor consequat pariatur anim sint nulla nostrud pariatur culpa excepteur sint duis. Fugiat nulla commodo excepteur ad.',
+             const Text('Nisi magna laboris irure culpa velit aliquip veniam ad pariatur laboris laborum excepteur dolor. Dolor sint tempor consequat pariatur anim sint nulla nostrud pariatur culpa excepteur sint duis. Fugiat nulla commodo excepteur ad.',
              textAlign: TextAlign.center,
              ),
              const SizedBox(height: 20),
