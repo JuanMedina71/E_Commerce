@@ -1,24 +1,31 @@
 import 'package:flutter/material.dart';
 
 class UserImageSmall extends StatelessWidget {
+  
+  final String url;
+  final double height;
+  final double width;
+
+
   const UserImageSmall({
     super.key,
-    required this.imageUrl
+    required this.url,
+    this.height = 60,
+    this.width = 60,
   });
 
-  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
     return Container(
     margin: const EdgeInsets.only(top: 8, right: 8),
-    height: 70,
-    width: 70,
+    height: height,
+    width: width,
     decoration: BoxDecoration(
       image: DecorationImage(
-        image: NetworkImage(imageUrl), 
+        image: NetworkImage(url), 
         fit: BoxFit.cover),
-        borderRadius: BorderRadius.circular(20)
+        borderRadius: BorderRadius.circular(8.0)
         ),
     );
   }

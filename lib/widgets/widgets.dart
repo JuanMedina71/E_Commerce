@@ -6,3 +6,4 @@ export 'choice_button.dart';
 export 'custom_check_box.dart';
 export 'custom_button.dart';
 export 'custom_container.dart';
+export 'title_with_icon.dart';

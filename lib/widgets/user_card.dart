@@ -59,10 +59,10 @@ class UserCard extends StatelessWidget {
                   Text('${user.jobTitle}', style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
                   
                   Row(children: [
-                    UserImageSmall(imageUrl: user.imageUrls[0]),
-                     UserImageSmall(imageUrl: user.imageUrls[1]),
-                     UserImageSmall(imageUrl: user.imageUrls[2]),
-                     UserImageSmall(imageUrl: user.imageUrls[3]),
+                    UserImageSmall(url: user.imageUrls[0]),
+                     UserImageSmall(url: user.imageUrls[1]),
+                     UserImageSmall(url: user.imageUrls[2]),
+                     UserImageSmall(url: user.imageUrls[3]),
                      SizedBox(width: 10),
                      Container(
                       width: 35,

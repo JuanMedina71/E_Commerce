@@ -10,7 +10,7 @@ class Message extends Equatable {
   final DateTime dateTime;
   final String timeString;
 
-  Message({
+  const Message({
     required this.id, 
     required this.senderId, 
     required this.receiverId, 
@@ -38,7 +38,46 @@ class Message extends Equatable {
       dateTime: DateTime.now(), 
       timeString: DateFormat('jm').format(DateTime.now())
       ),
-
+    Message(
+      id: 3, 
+      senderId: 1, 
+      receiverId: 2, 
+      message: 'Estoy muy bien y tu que tal?', 
+      dateTime: DateTime.now(), 
+      timeString: DateFormat('jm').format(DateTime.now())
+      ),
+      Message(
+      id: 4, 
+      senderId: 1, 
+      receiverId: 3, 
+      message: 'Estoy muy bien y tu que tal?', 
+      dateTime: DateTime.now(), 
+      timeString: DateFormat('jm').format(DateTime.now())
+      ),
+      Message(
+      id: 5, 
+      senderId: 3, 
+      receiverId: 1, 
+      message: 'Estoy muy bien y tu que tal?', 
+      dateTime: DateTime.now(), 
+      timeString: DateFormat('jm').format(DateTime.now())
+      ),
+      Message(
+      id: 6, 
+      senderId: 1, 
+      receiverId: 5, 
+      message: 'Estoy muy bien y tu que tal?', 
+      dateTime: DateTime.now(), 
+      timeString: DateFormat('jm').format(DateTime.now())
+      ),
+      Message(
+      id: 7, 
+      senderId: 5, 
+      receiverId: 1, 
+      message: 'Estoy muy bien y tu que tal?', 
+      dateTime: DateTime.now(), 
+      timeString: DateFormat('jm').format(DateTime.now())
+      ),
   ];
 
 

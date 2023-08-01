@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -39,9 +40,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               icon: Icon(Icons.message_outlined, color: Theme.of(context).primaryColor)
             ),
             IconButton(
-              onPressed: (){
-                //TODO:  Implementar acciones con Bloc
-                },
+              onPressed: () => context.replace('/profile'),
              icon: Icon(Icons.account_circle_outlined, color: Theme.of(context).primaryColor)
             ),
 
