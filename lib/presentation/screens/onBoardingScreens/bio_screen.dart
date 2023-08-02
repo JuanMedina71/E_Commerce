@@ -11,6 +11,7 @@ class Biography extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = TextEditingController();
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
       child: Column(
@@ -27,6 +28,7 @@ class Biography extends StatelessWidget {
               CustomDescriptionField(
                 tabController: tabController,
                 text: 'DESCRIPCIÓN BREVE',
+                controller: controller,
               ),
               const SizedBox(height: 80),
               CustomTextHeader(

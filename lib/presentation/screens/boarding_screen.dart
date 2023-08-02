@@ -33,7 +33,7 @@ class BoardingScreen extends StatelessWidget {
          });
     return  Scaffold(
       appBar: const CustomAppBar(
-        title: 'TUTORIAL',
+        title: 'REGISTRATE',
         hasActions: false,
       ),
       body: TabBarView(children: [

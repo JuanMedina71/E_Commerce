@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CustomDescriptionField extends StatelessWidget {
+  final TextEditingController controller;
   final TabController tabController;
   final String text;
 
   const CustomDescriptionField ({
     super.key,
+    required this.controller,
     required this.tabController,
-    required this.text
+    required this.text, 
     });
 
   @override

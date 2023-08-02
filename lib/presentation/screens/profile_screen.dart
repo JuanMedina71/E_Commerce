@@ -16,20 +16,23 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(height: 20),
           Stack(
             children: [
-              Container(
-                height: MediaQuery.of(context).size.height / 3,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: const [
-                    BoxShadow(
-                        color: Colors.grey,
-                        offset: Offset(3, 3),
-                        blurRadius: 3,
-                        spreadRadius: 3)
-                  ],
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(user.imageUrls[0]),
+              Hero(
+                tag: 'user_image',
+                child: Container(
+                  height: MediaQuery.of(context).size.height / 3,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: const [
+                      BoxShadow(
+                          color: Colors.grey,
+                          offset: Offset(3, 3),
+                          blurRadius: 3,
+                          spreadRadius: 3)
+                    ],
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(user.imageUrls[0]),
+                    ),
                   ),
                 ),
               ),
@@ -96,8 +99,11 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 const TitleWithIcon(
                     title: 'Location', icon: Icons.location_history),
+                    const Text('Commodo qui eu ipsum ut anim culpa magna ut qui.'),
                 const TitleWithIcon(
                     title: 'Interests', icon: Icons.read_more_outlined),
+                    Row(children: [
+                    ],)
               ],
             ),
           )

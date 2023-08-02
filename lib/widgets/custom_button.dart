@@ -1,4 +1,6 @@
+import 'package:e_commerce/presentation/cubits/signup/signup_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomButton extends StatelessWidget {
   final TabController tabController;
@@ -24,6 +26,9 @@ class CustomButton extends StatelessWidget {
               elevation: 0, backgroundColor: Colors.transparent),
           onPressed: () {
             tabController.animateTo(tabController.index + 1);
+            if(tabController.index == 2) {
+              context.read<SignupCubit>().signupWithCredentials();
+            }
           },
           child: SizedBox(
               width: double.infinity,

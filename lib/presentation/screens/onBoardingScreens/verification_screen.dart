@@ -14,6 +14,7 @@ class Verification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = TextEditingController();
     return Padding(
       
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
@@ -25,7 +26,7 @@ class Verification extends StatelessWidget {
                 const SizedBox(height: 25),
                 CustomTextHeader(tabController: tabController, text: 'Ingresa tu código de verificación',),
                 const SizedBox(height: 30),
-                CustomVerificationField(tabController: tabController, text: 'CÓDIGO DE VERIFICACIÓN',),  
+                CustomVerificationField(tabController: tabController, text: 'CÓDIGO DE VERIFICACIÓN', controller: controller),  
                 const SizedBox(height: 30),
 
             ],

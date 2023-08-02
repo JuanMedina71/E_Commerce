@@ -3,11 +3,16 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final TabController tabController;
   final String text;
+  final TextEditingController? controller;
+  final Function(String)? onChanged;
 
   const CustomTextField ({
     super.key,
+    this.controller,
+    this.onChanged,
     required this.tabController,
     required this.text
+
     });
 
   @override
@@ -24,6 +29,7 @@ class CustomTextField extends StatelessWidget {
         contentPadding: const EdgeInsets.only(bottom: 5.0, top: 12.5, left: 10),
         
       ),
+      onChanged:  onChanged,
 
     );
   }

@@ -40,7 +40,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               icon: Icon(Icons.message_outlined, color: Theme.of(context).primaryColor)
             ),
             IconButton(
-              onPressed: () => context.replace('/profile'),
+              onPressed: () => context.push('/profile'),
              icon: Icon(Icons.account_circle_outlined, color: Theme.of(context).primaryColor)
             ),
 
