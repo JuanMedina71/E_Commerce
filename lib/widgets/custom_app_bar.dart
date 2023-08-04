@@ -35,7 +35,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           [
             IconButton(
               onPressed: (){
-                //TODO: Implementar accion con bloc
               }, 
               icon: Icon(Icons.message_outlined, color: Theme.of(context).primaryColor)
             ),
@@ -50,6 +49,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
   
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(56.0);
 }

@@ -1,9 +1,12 @@
+import 'package:e_commerce/repositories/storage/storage_repository.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class CustomImageContainer extends StatelessWidget {
   final TabController tabController;
+  final String? imageUrl;
 
-  const CustomImageContainer({super.key, required this.tabController});
+  const CustomImageContainer({super.key, required this.tabController, this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -21,15 +24,32 @@ class CustomImageContainer extends StatelessWidget {
             right: BorderSide(color: Theme.of(context).primaryColor, width: 1),
           ),
         ),
-        child: Align(
+        child: 
+        (imageUrl == null) ?
+        Align(
             alignment: Alignment.bottomRight,
             child: IconButton(
               icon: const Icon(
                 Icons.add_circle_outlined,
                 color: Colors.red,
               ),
-              onPressed: () {},
-            )),
+              onPressed: () async{
+                  ImagePicker picker = ImagePicker();
+                  final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+
+                  if(image == null) {
+                    // ignore: use_build_context_synchronously
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No image was selected.')));
+                  }
+
+                  if(image != null) {
+                  
+                  StorageRepository().uploadImage(image);
+                  }
+
+              },
+            )
+            ): Image.network(imageUrl!, fit: BoxFit.cover,),
       ),
     );
   }

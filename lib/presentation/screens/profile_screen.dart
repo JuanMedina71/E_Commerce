@@ -102,7 +102,7 @@ class ProfileScreen extends StatelessWidget {
                     const Text('Commodo qui eu ipsum ut anim culpa magna ut qui.'),
                 const TitleWithIcon(
                     title: 'Interests', icon: Icons.read_more_outlined),
-                    Row(children: [
+                    const Row(children: [
                     ],)
               ],
             ),

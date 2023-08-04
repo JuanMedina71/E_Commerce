@@ -2,8 +2,10 @@ import 'package:e_commerce/config/router/router.dart';
 import 'package:e_commerce/config/theme/app_theme.dart';
 import 'package:e_commerce/models/models.dart';
 import 'package:e_commerce/presentation/blocs/auth/auth_bloc.dart';
+import 'package:e_commerce/presentation/blocs/images/images_bloc.dart';
 import 'package:e_commerce/presentation/blocs/swipe/swipe_bloc.dart';
 import 'package:e_commerce/repositories/auth_repository.dart';
+import 'package:e_commerce/repositories/database/database_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -34,6 +36,9 @@ class MainApp extends StatelessWidget {
           ),
           BlocProvider(
             create: (_) => SwipeBloc()..add(LoadUsers(users: User.users)),
+          ),
+          BlocProvider(create: (_) => ImagesBloc(databaseRepository: DatabaseRepository()
+          )..add(LoadImages())
           )
         ],
         child: MaterialApp.router(

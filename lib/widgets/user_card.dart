@@ -56,18 +56,18 @@ class UserCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                   Text('${user.name}, ${user.age}', style: Theme.of(context).textTheme.displaySmall!.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
-                  Text('${user.jobTitle}', style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
+                  Text(user.jobTitle, style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
                   
                   Row(children: [
                     UserImageSmall(url: user.imageUrls[0]),
                      UserImageSmall(url: user.imageUrls[1]),
                      UserImageSmall(url: user.imageUrls[2]),
                      UserImageSmall(url: user.imageUrls[3]),
-                     SizedBox(width: 10),
+                     const SizedBox(width: 10),
                      Container(
                       width: 35,
                       height: 35,
-                      decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white60),
+                      decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white60),
                       child: Icon(Icons.info_outline_rounded, size: 25, color: Theme.of(context).primaryColor)),  
                      
                   ])

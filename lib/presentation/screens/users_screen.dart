@@ -79,7 +79,7 @@ class UserScreen extends StatelessWidget {
               children: [
                 Text('${user.name}, ${user.age}',
                     style: Theme.of(context).textTheme.displaySmall),
-                Text('${user.jobTitle}',
+                Text(user.jobTitle,
                     style: Theme.of(context).textTheme.bodyLarge),
                 const SizedBox(
                   height: 20,
@@ -91,7 +91,7 @@ class UserScreen extends StatelessWidget {
                       .headlineSmall!
                       .copyWith(fontWeight: FontWeight.bold),
                 ),
-                Text('${user.bio}',
+                Text(user.bio,
                     style: Theme.of(context).textTheme.bodySmall),
                 const SizedBox(
                   height: 20,

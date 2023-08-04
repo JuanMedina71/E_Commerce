@@ -30,8 +30,8 @@ class ChoiceButton extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.white,
-        gradient: hasGradient ? LinearGradient(colors: [Colors.black, Colors.yellowAccent]) 
-                              : LinearGradient(colors: [Colors.red, Colors.black]),
+        gradient: hasGradient ? const LinearGradient(colors: [Colors.black, Colors.yellowAccent]) 
+                              : const LinearGradient(colors: [Colors.red, Colors.black]),
         boxShadow:  [
           BoxShadow(
             color: Colors.grey.withAlpha(50), 

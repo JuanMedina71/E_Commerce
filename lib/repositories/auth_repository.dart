@@ -15,7 +15,6 @@ class AuthRepository extends BaseAuthRepository {
     try {
       final credential = await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
       
-      
       final user = credential.user;
       return user;
     } catch (_) {}
